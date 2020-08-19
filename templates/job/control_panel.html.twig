@@ -17,10 +17,7 @@
             {% if job.activated %}
                 <p class="navbar-text">
                     {% set daysToExpiring = job.expiresAt.diff(date())|date('%a') %}
-
-                    {% transchoice daysToExpiring with {'%days%': daysToExpiring} %}
-                        ]-Inf,0] Expired|{1}Expires in 1 day|]1,Inf[ Expires in %days% days
-                    {% endtranschoice %}
+                    {{ 'daysToExpiring' | trans({'count':daysToExpiring}) }}
                 </p>
 
                 {% if job.expiresAt.diff(date())|date('%a') < 5 %}
@@ -46,7 +43,7 @@
             {% endif %}
 
             <p class="navbar-text navbar-right">
-                {{ '[Bookmark this <a href="%url%">URL</a> to manage this job in the future]'|trans({'%url%': path('job.preview', {token: job.token})})|raw }}
+                {{ 'Bookmark'|trans({'url': path('job.preview', {token: job.token})})|raw }}
             </p>
         </div>
     </div>

@@ -1,0 +1,60 @@
+Actions: Actions
+Activate: Activer
+Activated: Activaté
+Active: Active
+'Admin Panel': 'Administration'
+Affiliates: Affiliés
+'Are you sure you want to delete this item?': 'Êtes-vous sûr de vouloir supprimer cet élément ?'
+'Back to list': 'Retour à la liste'
+'Become an Affiliate': 'Devenir affilié'
+Categories: Categories
+City: Ville
+Company: Société
+'Control Panel:': 'Control Panel:'
+Create: Créer
+'Create new': 'Créer un nouveau'
+'Create new category': 'Créer une nouvelle catégorie'
+'Create new job': 'Créer une nouvelle offre'
+Deactivate: Désactiver
+Delete: Supprimer
+Edit: Modifier
+'Edit category': 'Modifier la catégorie {category}'
+'Edit job': "Modifier l'offre"
+Email: Email
+'Extend (for another 30 days)': 'Prolonger (pour 30 jours supplémentaires)'
+'How to apply?': 'Comment appliquer ?'
+Job: Offre
+'Job creation': 'Créer une offre'
+'Job edit': "Modifier l'offre"
+Jobeet: Jobeet
+'Jobeet - Admin': 'Jobeet - Admin'
+'Jobeet - Your best job board': "Jobeet - La recherche d'offre"
+'Jobeet Admin': 'Jobeet Admin'
+Jobs: Offres
+'Jobs in category': 'Offre dans la catégorie {category}'
+Location: Emplacement
+Logout: Déconnection
+Name: Nom
+'No': 'Non'
+Position: Position
+'Post a Job': 'Publier une offre'
+Publish: Publier
+'Recent viewed jobs:': 'Offres vues récemment:'
+Save: Save
+'Thank you! You will receive an email with your affiliate token as soon as your account will be activated': >
+    "Merci ! Vous allez recevoir un email avec votre jeton d'affilié dès que votre compte sera activé"
+URL: URL
+'Yes': 'Oui'
+'Your account has been activated successfully!': 'Votre compte a été activé.'
+'Your affiliate account has been created': 'Votre compte a été créé.'
+'Your token is:': 'Votre jeton est :'
+'Bookmark': "[Mettez en favori cette adresse <a href='{url}'>{url}</a> pour gérer cette offre]"
+'daysToExpiring': >-
+    {count, plural,
+        =0    {Expiré}
+        one   {Expire dans 1 jour}
+        other {Expire dans # jours}
+    }
+
+'back to list': 'back to list'
+'posted on': 'publiée le {date}'
