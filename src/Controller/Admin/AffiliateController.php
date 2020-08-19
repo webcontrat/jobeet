@@ -10,6 +10,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class AffiliateController
+ *
+ * @package App\Controller\Admin
+ */
 class AffiliateController extends AbstractController
 {
     /**

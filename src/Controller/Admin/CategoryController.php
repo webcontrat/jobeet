@@ -10,6 +10,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class CategoryController
+ *
+ * @package App\Controller\Admin
+ */
 class CategoryController extends AbstractController
 {
     /**
@@ -89,7 +94,12 @@ class CategoryController extends AbstractController
     /**
      * Delete category.
      *
-     * @Route("/admin/category/{id}/delete", name="admin.category.delete", methods="DELETE", requirements={"id" = "\d+"})
+     * @Route(
+     *     "/admin/category/{id}/delete",
+     *     name="admin.category.delete",
+     *     methods="DELETE",
+     *     requirements={"id" = "\d+"}
+     * )
      *
      * @param Request $request
      * @param EntityManagerInterface $em

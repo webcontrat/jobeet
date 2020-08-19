@@ -11,6 +11,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class JobController
+ *
+ * @package App\Controller\Admin
+ */
 class JobController extends AbstractController
 {
     /**
@@ -18,7 +23,7 @@ class JobController extends AbstractController
      * @Route("/admin/jobs/{page}",
      *     name="admin.job.list",
      *     methods="GET",
-     *     defaults={"page"= 1},
+     *     defaults={"page"=1},
      *     requirements={"page" = "\d+"}
      * )
      *

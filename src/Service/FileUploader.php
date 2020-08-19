@@ -4,6 +4,11 @@ namespace App\Service;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
+/**
+ * Class FileUploader
+ *
+ * @package App\Service
+ */
 class FileUploader
 {
     /** @var string */
@@ -29,6 +34,7 @@ class FileUploader
      * @param UploadedFile $file
      *
      * @return string
+     * @throws \Exception
      */
     public function upload(UploadedFile $file) : string
     {

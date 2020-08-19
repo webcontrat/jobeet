@@ -5,12 +5,19 @@ namespace App\EventListener;
 use App\Entity\Job;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 
+/**
+ * Class JobTokenListener
+ *
+ * @package App\EventListener
+ */
 class JobTokenListener
 {
     /**
      * @param LifecycleEventArgs $args
+     *
+     * @throws \Exception
      */
-    public function prePersist(LifecycleEventArgs $args)
+    public function prePersist(LifecycleEventArgs $args): void
     {
         $entity = $args->getEntity();
 

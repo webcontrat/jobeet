@@ -15,6 +15,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class JobController
+ *
+ * @package App\Controller
+ */
 class JobController extends AbstractController
 {
     /**

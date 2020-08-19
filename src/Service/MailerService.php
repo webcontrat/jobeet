@@ -6,23 +6,29 @@ use App\Entity\Affiliate;
 use Swift_Mailer;
 use Swift_Message;
 use Symfony\Component\Templating\EngineInterface;
+use Twig\Environment;
 
+/**
+ * Class MailerService
+ *
+ * @package App\Service
+ */
 class MailerService
 {
     /** @var Swift_Mailer */
     private $mailer;
 
     /** @var EngineInterface */
-    private $templateEngine;
+    private $environment;
 
     /**
      * @param Swift_Mailer $mailer
-     * @param EngineInterface $templateEngine
+     * @param Environment  $environment
      */
-    public function __construct(Swift_Mailer $mailer, EngineInterface $templateEngine)
+    public function __construct(Swift_Mailer $mailer, Environment $environment)
     {
         $this->mailer = $mailer;
-        $this->templateEngine = $templateEngine;
+        $this->environment = $environment;
     }
 
     /**
@@ -35,7 +41,7 @@ class MailerService
             ->setTo($affiliate->getEmail())
             ->setFrom('jobeet@example.com')
             ->setBody(
-                $this->templateEngine->render(
+                $this->environment->render(
                     'emails/affiliate_activation.html.twig',
                     [
                         'token' => $affiliate->getToken(),

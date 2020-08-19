@@ -4,13 +4,20 @@ namespace App\Repository;
 
 use App\Entity\Affiliate;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
 
+/**
+ * Class AffiliateRepository
+ *
+ * @package App\Repository
+ */
 class AffiliateRepository extends EntityRepository
 {
     /**
      * @param string $token
      *
      * @return Affiliate|null
+     * @throws NonUniqueResultException
      */
     public function findOneActiveByToken(string $token) : ?Affiliate
     {

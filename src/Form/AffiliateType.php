@@ -14,6 +14,11 @@ use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+/**
+ * Class AffiliateType
+ *
+ * @package App\Form
+ */
 class AffiliateType extends AbstractType
 {
     /**

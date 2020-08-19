@@ -31,7 +31,7 @@
                 </li>
 
                 <li role="presentation" {% if currentRouteName starts with 'admin.job.' %}class="active"{% endif %}>
-                    <a href="{{ path('admin.job.list') }}">{{ 'Jobs'|trans }}</a>
+                    <a href="{{ path('admin.job.list', {'page':1}) }}">{{ 'Jobs'|trans }}</a>
                 </li>
 
                 <li role="presentation" {% if currentRouteName starts with 'admin.affiliate.' %}class="active"{% endif %}>

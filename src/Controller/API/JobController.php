@@ -10,10 +10,15 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Entity;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class JobController
+ *
+ * @package App\Controller\API
+ */
 class JobController extends AbstractFOSRestController
 {
     /**
-     * @Rest\Get("/{token}/jobs", name="api.job.list")
+     * @Rest\Get("/jobs/{token}", name="api.job.list")
      *
      * @Entity("affiliate", expr="repository.findOneActiveByToken(token)")
      * @param Affiliate              $affiliate

@@ -202,7 +202,7 @@ class Affiliate
     /**
      * @ORM\PrePersist
      */
-    public function prePersist()
+    public function prePersist(): void
     {
         $this->createdAt = new \DateTime();
     }

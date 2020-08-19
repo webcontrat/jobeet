@@ -9,6 +9,11 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
+/**
+ * Class CreateCategoryCommand
+ *
+ * @package App\Command
+ */
 class CreateCategoryCommand extends Command
 {
     /** @var CategoryService */
@@ -49,7 +54,8 @@ class CreateCategoryCommand extends Command
     {
         if (!$input->getArgument('name')) {
             $question = new Question('<question>Please choose a name: </question>');
-            $question->setValidator(function ($name) {
+            $question->setValidator(
+                static function ($name) {
                 if (empty($name)) {
                     throw new \Exception('Name can not be empty');
                 }

@@ -5,12 +5,17 @@ namespace App\Repository;
 use App\Entity\Category;
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class CategoryRepository
+ *
+ * @package App\Repository
+ */
 class CategoryRepository extends EntityRepository
 {
     /**
      * @return Category[]
      */
-    public function findWithActiveJobs()
+    public function findWithActiveJobs(): array
     {
         return $this->createQueryBuilder('c')
             ->select('c')

@@ -9,6 +9,11 @@ use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\NonUniqueResultException;
 
+/**
+ * Class JobRepository
+ *
+ * @package App\Repository
+ */
 class JobRepository extends EntityRepository
 {
     /**
@@ -16,7 +21,7 @@ class JobRepository extends EntityRepository
      *
      * @return Job[]
      */
-    public function findActiveJobs(int $categoryId = null)
+    public function findActiveJobs(int $categoryId = null): array
     {
         $qb = $this->createQueryBuilder('j')
             ->where('j.expiresAt > :date')
@@ -75,7 +80,7 @@ class JobRepository extends EntityRepository
      *
      * @return Job[]
      */
-    public function findActiveJobsForAffiliate(Affiliate $affiliate)
+    public function findActiveJobsForAffiliate(Affiliate $affiliate): array
     {
         return $this->createQueryBuilder('j')
             ->leftJoin('j.category', 'c')

@@ -6,15 +6,19 @@ use App\Entity\Category;
 use App\Entity\Job;
 use App\Service\JobHistoryService;
 use Knp\Component\Pager\PaginatorInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
-class CategoryController extends Controller
+/**
+ * Class CategoryController
+ *
+ * @package App\Controller
+ */
+class CategoryController extends AbstractController
 {
     /**
      * Finds and displays a category entity.
-     *
      * @Route(
      *     "/category/{slug}/{page}",
      *     name="category.show",
@@ -23,10 +27,10 @@ class CategoryController extends Controller
      *     requirements={"page" = "\d+"}
      * )
      *
-     * @param Category $category
-     * @param int $page
+     * @param Category           $category
+     * @param int                $page
      * @param PaginatorInterface $paginator
-     * @param JobHistoryService $jobHistoryService
+     * @param JobHistoryService  $jobHistoryService
      *
      * @return Response
      */
@@ -35,17 +39,20 @@ class CategoryController extends Controller
         int $page,
         PaginatorInterface $paginator,
         JobHistoryService $jobHistoryService
-    ) : Response {
+    ): Response {
         $activeJobs = $paginator->paginate(
             $this->getDoctrine()->getRepository(Job::class)->getPaginatedActiveJobsByCategoryQuery($category),
             $page,
             $this->getParameter('max_jobs_on_category')
         );
 
-        return $this->render('category/show.html.twig', [
-            'category' => $category,
-            'activeJobs' => $activeJobs,
-            'historyJobs' => $jobHistoryService->getJobs(),
-        ]);
+        return $this->render(
+            'category/show.html.twig',
+            [
+                'category' => $category,
+                'activeJobs' => $activeJobs,
+                'historyJobs' => $jobHistoryService->getJobs(),
+            ]
+        );
     }
 }

@@ -9,6 +9,11 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 
+/**
+ * Class JobUploadListener
+ *
+ * @package App\EventListener
+ */
 class JobUploadListener
 {
     /** @var FileUploader */
@@ -25,7 +30,7 @@ class JobUploadListener
     /**
      * @param LifecycleEventArgs $args
      */
-    public function prePersist(LifecycleEventArgs $args)
+    public function prePersist(LifecycleEventArgs $args): void
     {
         $entity = $args->getEntity();
 
@@ -35,7 +40,7 @@ class JobUploadListener
     /**
      * @param PreUpdateEventArgs $args
      */
-    public function preUpdate(PreUpdateEventArgs $args)
+    public function preUpdate(PreUpdateEventArgs $args): void
     {
         $entity = $args->getEntity();
 
@@ -46,7 +51,7 @@ class JobUploadListener
     /**
      * @param LifecycleEventArgs $args
      */
-    public function postLoad(LifecycleEventArgs $args)
+    public function postLoad(LifecycleEventArgs $args): void
     {
         $entity = $args->getEntity();
 
@@ -56,7 +61,7 @@ class JobUploadListener
     /**
      * @param $entity
      */
-    private function uploadFile($entity)
+    private function uploadFile($entity): void
     {
         // upload only works for Job entities
         if (!$entity instanceof Job) {
@@ -76,7 +81,7 @@ class JobUploadListener
     /**
      * @param $entity
      */
-    private function stringToFile($entity)
+    private function stringToFile($entity): void
     {
         if (!$entity instanceof Job) {
             return;
@@ -90,7 +95,7 @@ class JobUploadListener
     /**
      * @param $entity
      */
-    private function fileToString($entity)
+    private function fileToString($entity): void
     {
         if (!$entity instanceof Job) {
             return;

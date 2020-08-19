@@ -4,7 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 
 class CategoryFixtures extends Fixture
 {
@@ -13,7 +13,7 @@ class CategoryFixtures extends Fixture
      *
      * @return void
      */
-    public function load(ObjectManager $manager) : void
+    public function load(ObjectManager $manager): void
     {
         $designCategory = new Category();
         $designCategory->setName('Design');

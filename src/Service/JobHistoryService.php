@@ -6,6 +6,11 @@ use App\Entity\Job;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+/**
+ * Class JobHistoryService
+ *
+ * @package App\Service
+ */
 class JobHistoryService
 {
     private const MAX = 3;

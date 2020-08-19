@@ -5,8 +5,13 @@ namespace App\DataFixtures;
 use App\Entity\Affiliate;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 
+/**
+ * Class AffiliateFixtures
+ *
+ * @package App\DataFixtures
+ */
 class AffiliateFixtures extends Fixture implements DependentFixtureInterface
 {
     /**

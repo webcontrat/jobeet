@@ -11,6 +11,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class AffiliateController
+ *
+ * @package App\Controller
+ */
 class AffiliateController extends AbstractController
 {
     /**
@@ -50,7 +55,7 @@ class AffiliateController extends AbstractController
      *
      * @return Response
      */
-    public function wait()
+    public function wait(): Response
     {
         return $this->render('affiliate/wait.html.twig');
     }

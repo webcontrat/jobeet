@@ -20,6 +20,11 @@ use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\NotNull;
 
+/**
+ * Class JobType
+ *
+ * @package App\Form
+ */
 class JobType extends AbstractType
 {
     /**

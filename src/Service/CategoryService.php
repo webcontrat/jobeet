@@ -5,6 +5,11 @@ namespace App\Service;
 use App\Entity\Category;
 use Doctrine\ORM\EntityManagerInterface;
 
+/**
+ * Class CategoryService
+ *
+ * @package App\Service
+ */
 class CategoryService
 {
     /** @var EntityManagerInterface */
