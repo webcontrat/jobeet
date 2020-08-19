@@ -15,17 +15,16 @@ class JobController extends AbstractController
 {
     /**
      * Lists all jobs entities.
-     *
      * @Route("/admin/jobs/{page}",
      *     name="admin.job.list",
      *     methods="GET",
-     *     defaults={"page": 1},
+     *     defaults={"page"= 1},
      *     requirements={"page" = "\d+"}
      * )
      *
      * @param EntityManagerInterface $em
-     * @param PaginatorInterface $paginator
-     * @param int $page
+     * @param PaginatorInterface     $paginator
+     * @param int                    $page
      *
      * @return Response
      */
