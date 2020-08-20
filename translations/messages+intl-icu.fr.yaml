@@ -36,10 +36,10 @@ Location: Emplacement
 Logout: Déconnection
 Name: Nom
 'No': 'Non'
-Position: Position
+Position: Poste
 'Post a Job': 'Publier une offre'
 Publish: Publier
-'Recent viewed jobs:': 'Offres vues récemment:'
+'Recent viewed jobs:': 'Offres vues récemment : '
 Save: Save
 'Thank you! You will receive an email with your affiliate token as soon as your account will be activated': >
     "Merci ! Vous allez recevoir un email avec votre jeton d'affilié dès que votre compte sera activé"
@@ -48,7 +48,7 @@ URL: URL
 'Your account has been activated successfully!': 'Votre compte a été activé.'
 'Your affiliate account has been created': 'Votre compte a été créé.'
 'Your token is:': 'Votre jeton est :'
-'Bookmark': "[Mettez en favori cette adresse <a href='{url}'>{url}</a> pour gérer cette offre]"
+'Bookmark': "Mettez en favori cette <a href=\"{path}\">adresse</a> pour gérer cette offre"
 'daysToExpiring': >-
     {count, plural,
         =0    {Expiré}

@@ -48,7 +48,7 @@ URL: URL
 'Your account has been activated successfully!': 'Your account has been activated successfully!'
 'Your affiliate account has been created': 'Your affiliate account has been created'
 'Your token is:': 'Your token is:'
-'Bookmark': '[Bookmark this <a href="url">URL</a> to manage this job in the future]'
+'Bookmark': '[Bookmark this <a href="{path}">URL</a> to manage this job in the future]'
 'daysToExpiring': >-
   {count, plural,
       =0    {Expired}
@@ -56,4 +56,4 @@ URL: URL
       other {Expires in # days}
   }
 'back to list': 'back to list'
-'posted on': 'posted on date'
+'posted on': 'posted on {date}'

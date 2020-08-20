@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="col-sm-2">
-                    <i class="pull-right">{{ 'posted on' |trans({'date': job.createdat|date('m/d/Y')}) }}</i>
+                    <i class="pull-right">{{ 'posted on' |trans({'date': job.createdat|format_date() }) }}</i>
                 </div>
             </div>
 

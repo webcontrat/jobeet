@@ -10,6 +10,7 @@ parameters:
     jobs_web_directory: '/uploads/jobs'
 
 services:
+    Twig\Extra\Intl\IntlExtension: ~
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
