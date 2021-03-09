@@ -34,10 +34,10 @@ User : admin
 Password : admin
 
  
-#### Fonctionnalité à développer : 
+#### Fonctionnalités à développer : 
 Jobeet est une application permettant de gérer des offres d’emploi.
 
-Le but de la fonctionnalité à développer est de pouvoir postuler à une offre d’emploi de manière très simplifiée.
+- 1ère fonctionnalité : Le but de la fonctionnalité est de pouvoir postuler à une offre d’emploi de manière très simplifiée.
 
 Pour cela, il faudra rajouter un bouton sur l'offre pour pouvoir y postuler :
 
@@ -50,9 +50,15 @@ Ce bouton doit mener à un formulaire avec les champs suivants à remplir par l�
 
 Il faut enregistrer automatiquement la date à laquelle l’utilisateur a postulé à l’emploi. Cette postulation doit être liée à l’offre d’emploi dans la base de données.
 
-Les données doivent être enregistrées dans une nouvelle table que vous aurez créée au préalable.
+Les données doivent être enregistrées dans une nouvelle table que vous aurez créé au préalable.
 
 Pour finir, vous devrez afficher la liste des postulants dans la section « Administration » du site.
+
+- 2ème : Jobeet privilégie les postulants dont le prénom comme par un K. Dans la liste des jobs (admin), écrire une twig extension qui gère les conditions d'affichage d'une petite icone qui indique qu’un job comporte plus de 2 postulants dont le prénom commence par K.
+
+- 3ème : Faire un voter pour vérifier que le bouton de suppression d’un job soit autorisé que pour le user dont l’adresse mail est admin@email.org
+
+- 4ème : EventLister, quand on édit un job, il faut contacter les postulants par mail pour les informer de la modification (il n'est pas nécessaire que l'envoi du mail fonctionne).
 
 Merci de ne développer que ce qui est indiqué au-dessus, les autres développements ne seront pas pris en compte.
 
