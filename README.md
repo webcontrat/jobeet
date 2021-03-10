@@ -1,4 +1,4 @@
-# Symfony 4.2 Jobeet Project
+# Symfony 4.4 Jobeet Project
 
 ### Pour un travail en local : 
 **Prérequis :**
