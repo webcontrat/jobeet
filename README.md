@@ -67,7 +67,7 @@ Merci de ne développer que ce qui est indiqué au-dessus, les autres développe
 
 Merci de commit votre code sur une nouvelle branche (pas la master).
 
-Ensuite de creer une pull request de votre branche vers la master. Ne pas la valider. Nous aurons ainsi en visuel les modifications que vous avez effectuez. Votre pull request devra être effectué avant le dimanche 6 septembre à minuit.
+Ensuite de creer une pull request de votre branche vers la master. Ne pas la valider. Nous aurons ainsi en visuel les modifications que vous avez effectuez. 
 
 [Documentation GIT](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests)
 
