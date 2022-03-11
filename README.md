@@ -4,7 +4,7 @@
 **Prérequis :**
 * Installation de composer : https://getcomposer.org/ 
 * Installer Git : https://git-scm.com/ 
-* Installer PHP 7.1 + MySQL + apache : 
+* Installer PHP 8.0 + MySQL + apache : 
 https://www.wampserver.com/ 
 https://www.uwamp.com/fr/ 
 https://doc.ubuntu-fr.org/lamp 
@@ -21,11 +21,17 @@ Git clone : https://github.com/webcontrat/jobeet
 
     composer install
 
-Modifier dans le .env la configuration de l’accès à la  base de données : DATABASE_URL
+Copiez le fichier /.env en /.env.local et modifiez dans ce nouveau fichier la configuration de l’accès à la base de données :
+- DB_NAME
+- DB_HOST
+- DB_PORT
+- DB_USER
+- DB_PASSWORD.
 
+#### Création de la database, des tables et chargement des données
+    php bin/console doctrine:database:create
     php bin/console doctrine:migration:migrate
     php bin/console doctrine:fixtures:load 
-    php bin/console server:start
 
 ### Information sur l’application Jobeet :
 Accès à l’admin : /login
@@ -33,8 +39,8 @@ Accès à l’admin : /login
 User : admin
 Password : admin
 
- 
-#### Fonctionnalités à développer : 
+
+### Fonctionnalités à développer : 
 Jobeet est une application permettant de gérer des offres d’emploi.
 
 - 1ère fonctionnalité : Le but de la fonctionnalité est de pouvoir postuler à une offre d’emploi de manière très simplifiée.
@@ -67,7 +73,7 @@ Merci de ne développer que ce qui est indiqué au-dessus, les autres développe
 
 Merci de commit votre code sur une nouvelle branche (pas la master).
 
-Ensuite de creer une pull request de votre branche vers la master. Ne pas la valider. Nous aurons ainsi en visuel les modifications que vous avez effectuez. 
+Ensuite de créer une pull request de votre branche vers la master. Ne pas la valider. Nous aurons ainsi en visuel les modifications que vous avez effectué. 
 
 [Documentation GIT](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests)
 
