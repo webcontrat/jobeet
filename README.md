@@ -14,7 +14,7 @@ https://doc.ubuntu-fr.org/lamp
 
 
 ### Importer le projet :
-Git clone : https://github.com/webcontrat/jobeet 
+git clone {lien fourni par mail}  
 
 
 ### Installer le projet :
@@ -28,7 +28,7 @@ Copiez le fichier /.env en /.env.local et modifiez dans ce nouveau fichier la co
 - DB_USER
 - DB_PASSWORD.
 
-#### Création de la database, des tables et chargement des données
+#### Commandes pour la création de la base de données, des tables et le chargement des données
     php bin/console doctrine:database:create
     php bin/console doctrine:migration:migrate
     php bin/console doctrine:fixtures:load 
