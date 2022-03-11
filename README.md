@@ -43,7 +43,8 @@ Password : admin
 ### Fonctionnalités à développer : 
 Jobeet est une application permettant de gérer des offres d’emploi.
 
-- 1ère fonctionnalité : Le but de la fonctionnalité est de pouvoir postuler à une offre d’emploi de manière très simplifiée.
+#### 1ère fonctionnalité 
+Le but de cette fonctionnalité est de pouvoir candidater à une offre d’emploi de manière très simplifiée.
 
 Pour cela, il faudra rajouter un bouton sur l'offre pour pouvoir y postuler :
 
@@ -54,17 +55,21 @@ Ce bouton doit mener à un formulaire avec les champs suivants à remplir par l�
  * Numéro de téléphone
  * Adresse
 
-Il faut enregistrer automatiquement la date à laquelle l’utilisateur a postulé à l’emploi. Cette postulation doit être liée à l’offre d’emploi dans la base de données.
+Il faut enregistrer automatiquement la date à laquelle l’utilisateur a candidaté. Cette candidature doit être liée à l’offre d’emploi dans la base de données.
 
-Les données doivent être enregistrées dans une nouvelle table que vous aurez créé au préalable.
+Les données doivent être enregistrées dans une nouvelle table que vous aurez créée au préalable.
 
 Pour finir, vous devrez afficher la liste des postulants dans la section « Administration » du site.
 
-- 2ème fonctionnalité : Jobeet privilégie les postulants dont le prénom commence par un K. Dans la liste des jobs (admin), écrire une twig extension qui gère les conditions d'affichage d'une petite icone qui indique qu’un job comporte plus de 2 postulants dont le prénom commence par K.
+#### 2ème fonctionnalité
+Jobeet privilégie les candidats dont le prénom commence par un K. Dans la liste des jobs (admin),
+écrire une twig extension qui gère les conditions d'affichage d'une petite icône qui indique qu’un job comporte plus de 2 candidats dont le prénom commence par K.
 
-- 3ème fonctionnalité : Utiliser les Voter pour vérifier que le bouton de suppression d’un job ne soit autorisé uniquement pour le user dont l’adresse mail est admin@email.org
+#### 3ème fonctionnalité
+Utiliser les Voter pour vérifier que la suppression d’un job ne soit autorisée uniquement pour le user dont l’adresse mail est admin@email.org
 
-- 4ème fonctionnalité : En utilisant les Event Symfony, quand on édit un job, contacter les postulants par mail pour les informer de la modification (il n'est pas nécessaire que l'envoi du mail fonctionne).
+#### 4ème fonctionnalité
+En utilisant les Event Symfony, lors de l'édition d'un job, contactez les postulants par mail pour les informer de la modification (il n'est pas nécessaire que l'envoi du mail fonctionne).
 
 Merci de ne développer que ce qui est indiqué au-dessus, les autres développements ne seront pas pris en compte.
 
