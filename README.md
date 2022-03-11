@@ -11,22 +11,22 @@ https://doc.ubuntu-fr.org/lamp
 
 
 ### Vous pouvez au choix utiliser un hébergeur si vous le souhaitez.
-
+Vous pouvez vous référer à la page de documentation de Symfony
+https://symfony.com/doc/4.4/setup/web_server_configuration.html
 
 ### Importer le projet :
 git clone {lien fourni par mail}  
 
 
 ### Installer le projet :
-
-    composer install
+    composer install (ou composer update si vous rencontrez des diffcultés lors de l'install) 
 
 Copiez le fichier /.env en /.env.local et modifiez dans ce nouveau fichier la configuration de l’accès à la base de données :
-- DB_NAME
 - DB_HOST
 - DB_PORT
+- DB_NAME
 - DB_USER
-- DB_PASSWORD.
+- DB_PASSWORD
 
 #### Commandes pour la création de la base de données, des tables et le chargement des données
     php bin/console doctrine:database:create
